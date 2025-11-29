@@ -100,7 +100,23 @@ a {
 
 .fotoku {
   margin-bottom: 4vh;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
 }
+
+[data-bs-theme=dark] .fotoku {
+  background-color: #1e1e1e;
+}
+
+.banner-image {
+  background-color: #ffffff;
+}
+
+[data-bs-theme=dark] .banner-image {
+  background-color: #1e1e1e;
+}
+
 
 /* Dropdown */
 .dropdown-menu {
@@ -230,22 +246,27 @@ a {
   box-shadow: 0 0 0 0.25rem rgba(200, 200, 200, .25);
 }
 
-/* dark theme */
+/* Visual Studio Dark theme */
 [data-bs-theme=dark] {
   color-scheme: dark;
 
-  --heading-color: #fff;
-  --bs-heading-color: #fff;
-  --bs-link-color: #CCCCCC;
-  --bs-link-hover-color: var(--bs-primary);
-  --bs-link-color-rgb: 204, 204, 204;
-  --bs-link-hover-color-rgb: 131, 169, 172;
-  --bs-body-color: var(--bs-light);
-  --bs-body-color-rgb: 241, 241, 240;
-  --bs-body-bg: #111;
-  --bs-body-bg-rgb: 17, 17, 41;
+  --heading-color: #d4d4d4;
+  --bs-heading-color: #d4d4d4;
+  --bs-link-color: #4EC9B0;
+  --bs-link-hover-color: #4EC9B0;
+  --bs-link-color-rgb: 78, 201, 176;
+  --bs-link-hover-color-rgb: 78, 201, 176;
+  --bs-body-color: #d4d4d4;
+  --bs-body-color-rgb: 212, 212, 212;
+  --bs-body-bg: #1e1e1e;
+  --bs-body-bg-rgb: 30, 30, 30;
 
-  color: var(--bs-gray);
+  color: #d4d4d4;
+}
+
+[data-bs-theme=dark] .bg-dark,
+[data-bs-theme=dark] .bg-white {
+  background-color: #252526 !important;
 }
 
 [data-bs-theme=dark] .dropdown-item {
@@ -256,6 +277,267 @@ a {
 [data-bs-theme=dark] .bg-white,
 [data-bs-theme=dark] .bg-light {
   --bs-bg-opacity: 0.1;
+}
+
+[data-bs-theme=dark] .text-muted {
+  color: #858585 !important;
+}
+
+[data-bs-theme=dark] .accordion-button {
+  color: #d4d4d4;
+  border-bottom: 1px solid #3e3e42;
+  background-color: transparent;
+}
+
+[data-bs-theme=dark] .accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+[data-bs-theme=dark] .accordion-body {
+  color: #d4d4d4;
+}
+
+[data-bs-theme=dark] .form-control {
+  background-color: #3c3c3c;
+  border-color: #3e3e42;
+  color: #d4d4d4;
+}
+
+[data-bs-theme=dark] .form-control:focus {
+  background-color: #3c3c3c;
+  border-color: #007acc;
+  color: #ffffff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 122, 204, 0.25);
+}
+
+[data-bs-theme=dark] .form-control::placeholder {
+  color: #858585;
+}
+
+[data-bs-theme=dark] .table {
+  color: #d4d4d4;
+}
+
+[data-bs-theme=dark] .table th {
+  color: #ffffff;
+  border-color: #3e3e42;
+}
+
+[data-bs-theme=dark] .table td {
+  color: #d4d4d4;
+  border-color: #3e3e42;
+}
+
+[data-bs-theme=dark] .table a {
+  color: #4EC9B0;
+}
+
+[data-bs-theme=dark] .skill-chart li .chart-border {
+  border-color: #3e3e42;
+}
+
+[data-bs-theme=dark] .icon-box {
+  color: #d4d4d4;
+}
+
+[data-bs-theme=dark] .data-info {
+  color: #d4d4d4;
+}
+
+[data-bs-theme=dark] .data-info h3 {
+  color: #ffffff;
+}
+
+[data-bs-theme=dark] .caption {
+  color: #d4d4d4;
+}
+
+[data-bs-theme=dark] .caption .title {
+  color: #ffffff;
+}
+
+[data-bs-theme=dark] .border-top,
+[data-bs-theme=dark] .border-bottom {
+  border-color: #3e3e42 !important;
+}
+
+[data-bs-theme=dark] .email-links a {
+  color: #d4d4d4;
+}
+
+[data-bs-theme=dark] .email-links a:hover {
+  color: #4EC9B0;
+}
+
+[data-bs-theme=dark] .btn-dark {
+  background-color: #007acc;
+  border-color: #007acc;
+  color: #ffffff;
+}
+
+[data-bs-theme=dark] .btn-dark:hover {
+  background-color: #005a9e;
+  border-color: #005a9e;
+  color: #ffffff;
+}
+
+[data-bs-theme=dark] .btn-outline-secondary {
+  border-color: #3e3e42;
+  color: #d4d4d4;
+}
+
+[data-bs-theme=dark] .btn-outline-secondary:hover {
+  background-color: #3e3e42;
+  border-color: #3e3e42;
+  color: #ffffff;
+}
+
+/* Theme Toggle Button Styling */
+#theme-toggle {
+  background-color: #212529;
+  border-color: #212529;
+  color: #ffffff;
+}
+
+#theme-toggle:hover {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+[data-bs-theme=dark] #theme-toggle {
+  background-color: #d4d4d4;
+  border-color: #d4d4d4;
+  color: #1e1e1e;
+}
+
+[data-bs-theme=dark] #theme-toggle:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #1e1e1e;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+[data-bs-theme=dark] .text-dark {
+  color: #d4d4d4 !important;
+}
+
+[data-bs-theme=dark] header {
+  border-right: 1px solid #3e3e42;
+}
+
+[data-bs-theme=dark] header .text-dark {
+  color: #d4d4d4 !important;
+}
+
+[data-bs-theme=dark] header a.text-dark {
+  color: #d4d4d4 !important;
+}
+
+[data-bs-theme=dark] header a.text-dark:hover {
+  color: #4EC9B0 !important;
+}
+
+[data-bs-theme=dark] header p {
+  color: #d4d4d4;
+}
+
+[data-bs-theme=dark] header .email-links a {
+  color: #d4d4d4;
+}
+
+[data-bs-theme=dark] header .email-links a:hover {
+  color: #4EC9B0;
+}
+
+/* Swiper Pagination Bullets */
+.swiper-pagination-bullet {
+  background-color: #000 !important;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+[data-bs-theme=dark] .swiper-pagination-bullet {
+  background-color: #4e4e4e !important;
+  opacity: 0.6;
+}
+
+[data-bs-theme=dark] .swiper-pagination-bullet-active {
+  background-color: #6e6e6e !important;
+  opacity: 1;
+}
+
+/* Theme Toggle Button Animation */
+#theme-toggle {
+  position: relative;
+  transition: all 0.33s ease;
+  overflow: visible;
+}
+
+#theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(0, 122, 204, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.33s ease, height 0.33s ease, opacity 0.33s ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#theme-toggle:active::before {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+#theme-toggle svg,
+#theme-toggle span {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.33s ease;
+}
+
+#theme-toggle:active {
+  transform: scale(0.95);
+}
+
+#theme-toggle:active svg {
+  transform: rotate(180deg) scale(1.1);
+}
+
+[data-bs-theme=dark] #theme-toggle::before {
+  background: rgba(78, 201, 176, 0.3);
+}
+
+/* Portfolio Image Centering */
+.portfolio-Swiper .swiper-wrapper {
+  align-items: center;
+}
+
+.portfolio-Swiper .image-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.portfolio-Swiper .image-holder img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* end of Bootstrap Color Theme */
@@ -281,6 +563,11 @@ a {
   border-bottom: 1px solid var(--bs-gray-300);
 }
 
+[data-bs-theme=dark] #one-page-menu .nav-link {
+  color: #d4d4d4;
+  border-bottom: 1px solid #3e3e42;
+}
+
 #one-page-menu .nav-link::before {
   content: '';
   position: absolute;
@@ -289,6 +576,14 @@ a {
   height: 1px;
   width: 0;
   transition: width 0.6s ease-out;
+}
+
+[data-bs-theme=dark] #one-page-menu .nav-link::before {
+  background: #007acc;
+}
+
+[data-bs-theme=dark] #one-page-menu .nav-link:hover {
+  color: #ffffff;
 }
 
 #one-page-menu .nav-link.active::before,
@@ -343,9 +638,18 @@ a {
   width: 26px;
   height: 26px;
   cursor: pointer;
-  z-index: 9;
+  z-index: 9999;
   margin: 20px;
   display: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+[data-bs-theme=dark] .menu-btn {
+  background-color: rgba(37, 37, 38, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .nav-active .menu-btn>span {
@@ -364,6 +668,11 @@ a {
   background: var(--bs-dark);
 }
 
+[data-bs-theme=dark] .nav-active .menu-btn>span::before,
+[data-bs-theme=dark] .nav-active .menu-btn>span::after {
+  background: #d4d4d4;
+}
+
 /* animate menu icon */
 .menu-btn>span,
 .menu-btn>span::before,
@@ -374,6 +683,12 @@ a {
   height: 2px;
   background-color: var(--bs-dark);
   transition-duration: .25s;
+}
+
+[data-bs-theme=dark] .menu-btn>span,
+[data-bs-theme=dark] .menu-btn>span::before,
+[data-bs-theme=dark] .menu-btn>span::after {
+  background-color: #d4d4d4;
 }
 
 .menu-btn>span::before {
@@ -676,6 +991,10 @@ width: 95%;
   letter-spacing: -0.1em;
   color: #F1F1F1;
   z-index: -1;
+}
+
+[data-bs-theme=dark] .bg-text:after {
+  color: rgba(255, 255, 255, 0.02);
 }
 @media only screen and (max-width: 768px) {
   .bg-text:after {
