@@ -196,6 +196,7 @@
     const themeIcon = document.getElementById('theme-icon');
     const themeText = document.getElementById('theme-text');
     const profileImage = document.getElementById('profile-image');
+    const logoImage = document.querySelector('.site-logo img');
     const body = document.body;
 
     // Function to update profile image based on theme
@@ -209,6 +210,17 @@
       }
     }
 
+    // Function to update logo based on theme
+    function updateLogo(isDark) {
+      if (logoImage) {
+        if (isDark) {
+          logoImage.src = 'images/Dirhamlogobiru.png';
+        } else {
+          logoImage.src = 'images/Dirhamlogohitam.png';
+        }
+      }
+    }
+
     // Check for saved theme preference or default to light mode
     const currentTheme = localStorage.getItem('theme') || 'light';
     
@@ -217,10 +229,12 @@
       body.setAttribute('data-bs-theme', 'dark');
       updateThemeIcon(true);
       updateProfileImage(true);
+      updateLogo(true);
     } else {
       body.removeAttribute('data-bs-theme');
       updateThemeIcon(false);
       updateProfileImage(false);
+      updateLogo(false);
     }
 
     // Theme toggle button click handler
@@ -237,12 +251,14 @@
           localStorage.setItem('theme', 'light');
           updateThemeIcon(false);
           updateProfileImage(false);
+          updateLogo(false);
         } else {
           // Switch to dark theme
           body.setAttribute('data-bs-theme', 'dark');
           localStorage.setItem('theme', 'dark');
           updateThemeIcon(true);
           updateProfileImage(true);
+          updateLogo(true);
         }
       });
     }
