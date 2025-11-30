@@ -1005,6 +1005,7 @@ width: 95%;
 /* Narrow the biodata table so td text lines are shorter and wrap nicely */
 .info-element .table {
   width: 70%;           /* stretch to parent col-lg-6 width */
+  border-collapse: collapse;
 }
 .info-element .table th {
   white-space: nowrap;   /* keep label on one line */
@@ -1015,6 +1016,22 @@ width: 95%;
 .info-element .table td {
   word-break: break-word;
   overflow-wrap: break-word;
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .info-element .table {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .info-element .table th {
+    width: 35%;
+    padding-right: 0.5rem;
+  }
+  .info-element .table td {
+    padding: 0.4rem 0;
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1028,7 +1045,7 @@ width: 95%;
 
 /* Slight left shift for About Me (1.2× small nudge) */
 .about-shift {
-  transform: translateX(-78%); /* adjust this value to fine-tune; negative moves left */
+  transform: translateX(-100%); /* adjust this value to fine-tune; negative moves left */
 }
 
 @media (max-width: 991px) {
