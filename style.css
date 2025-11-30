@@ -1001,3 +1001,92 @@ width: 95%;
     right: 0;
   }
 }
+
+/* Narrow the biodata table so td text lines are shorter and wrap nicely */
+.info-element .table {
+  width: 70%;           /* stretch to parent col-lg-6 width */
+}
+.info-element .table th {
+  white-space: nowrap;   /* keep label on one line */
+  padding-right: 0.75rem;
+  vertical-align: top;
+  width: 30%;
+}
+.info-element .table td {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 991px) {
+  .info-element .table,
+  .info-element .table td,
+  .info-element .table th {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Slight left shift for About Me (1.2× small nudge) */
+.about-shift {
+  transform: translateX(-78%); /* adjust this value to fine-tune; negative moves left */
+}
+
+@media (max-width: 991px) {
+  .about-shift {
+    transform: none; /* don't shift on small screens */
+  }
+}
+
+/* Fix: ensure the Experience heading is visible even if text-effect animations
+   haven't been triggered or a fixed left header overlaps anchored content. */
+#experience .display-4.txt-fx.slide-up,
+#experience .display-4.txt-fx.slide-up .letter {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+  color: inherit !important;
+}
+
+#experience .display-4 {
+  position: relative;
+  z-index: 2;
+}
+
+/* Prevent the fixed left header from covering the section when jumping to anchors */
+#experience {
+  scroll-margin-left: 120px; /* tweak if header width changes */
+}
+
+/* Experience heading: smaller + simple fade-up animation */
+.experience-title {
+  font-size: clamp(1.25rem, 2.2vw + 0.8rem, 2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+}
+
+@keyframes fadeUpSimple {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experience-animate {
+  opacity: 0;
+  transform: translateY(14px);
+  animation-name: fadeUpSimple;
+  animation-duration: 700ms;
+  animation-timing-function: var(--custom-easing);
+  animation-fill-mode: both;
+}
+.experience-animate.delay-200 { animation-delay: 200ms; }
+
+.aos-animate .experience-animate {
+  opacity: 1;
+  transform: none;
+}
